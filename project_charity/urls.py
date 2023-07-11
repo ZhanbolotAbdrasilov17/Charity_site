@@ -5,6 +5,10 @@ from . views import *
 
 urlpatterns = [
     path('', home, name='home'),
+    path('contact', contact, name='contact'),
+    path('gallery', gallery, name='gallery'),
+    path('causes', causes, name='causes'),
+    path('about', about, name='about'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
