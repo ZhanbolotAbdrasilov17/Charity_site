@@ -159,8 +159,10 @@ a:hover, a:focus, a:active {
   font-size: 25px;
   text-transform: uppercase;
 }
+
 .carousel-home .btn {
   margin-top: 30px;
+  border-radius: 20px;
 }
 
 .section-home {
@@ -270,6 +272,7 @@ a:hover, a:focus, a:active {
   -o-transition: all, 0.3s;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
+  border-radius: 30px;
 }
 .cause .cause-progress {
   margin: 0 10px 15px;
@@ -283,6 +286,7 @@ a:hover, a:focus, a:active {
 .cause .cause-img {
   margin-bottom: 15px;
   width: 100%;
+  border-radius: 30px;
 }
 .cause .cause-title {
   text-align: center;
@@ -502,6 +506,8 @@ form .alert {
   -o-transition: all, 0.3s;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
+
+  border-radius: 15px;
 }
 .btn-primary:hover {
   background: #fff;
@@ -744,6 +750,10 @@ form .alert {
 .owl-next {
   left: auto;
   right: 0;
+}
+
+.about-us-col {
+    border-radius: 30px;
 }
 
 /* =============================================================================
