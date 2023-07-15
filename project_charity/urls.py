@@ -9,6 +9,7 @@ urlpatterns = [
     path('gallery', gallery, name='gallery'),
     path('causes', causes, name='causes'),
     path('about', about, name='about'),
+    path('mail/create/', MailCreateView.as_view(), name='mail_create'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

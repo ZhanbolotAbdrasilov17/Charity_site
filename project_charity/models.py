@@ -55,3 +55,15 @@ class About_us_mainpaig(models.Model):
     class Meta:
         verbose_name_plural = 'Текст внизу главной страницы'
         verbose_name = 'Текст внизу главной страницы'
+
+
+
+class Email(models.Model):
+    full_name = models.CharField(max_length=200, verbose_name='ФИО')
+    address = models.CharField(max_length=200, verbose_name='Почта клиентов')
+    text = models.TextField(verbose_name='Текст')
+
+
+    class Meta:
+        verbose_name_plural = 'Почтовые адреса'
+        verbose_name = 'Почтовые адреса'
