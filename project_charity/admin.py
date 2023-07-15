@@ -5,3 +5,7 @@ from .models import *
 # Register your models here.
 admin.site.register(Props)
 admin.site.register(Gallery)
+
+@admin.register(About_us_mainpaig)
+class About_us_mainpaigAdminList(admin.ModelAdmin):
+    pass
