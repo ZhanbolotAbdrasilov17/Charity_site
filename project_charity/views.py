@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.conf import settings
+from django.views.generic import DetailView
+
 from .models import *
 from django.contrib import messages
 from django.core.mail import send_mail
@@ -20,7 +22,20 @@ def about(request):
 
 
 def causes(request):
-    return render(request, 'causes.html', )
+    cases = HelpCase.objects.all()
+    context = {'cases': cases}
+
+    return render(request, 'causes.html', context)
+
+class CaseDetail(DetailView):
+    model = HelpCase
+    template_name = "case_details.html"
+    context_object_name = 'case'
+    pk_url_kwarg = 'case_id'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
 
 def causes_single(request):
     return render(request, 'causes_single.html', )

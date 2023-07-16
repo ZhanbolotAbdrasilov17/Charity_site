@@ -1,0 +1,121 @@
+{% extends 'index.html' %}
+{% load static %}
+{%  block page %}
+{% load i18n %}
+
+	<div class="page-heading text-center">
+
+		<div class="container zoomIn animated">
+			
+			<h1 class="page-title">{{ case.title }}<span class="title-under"></span></h1>
+			<p class="page-description">
+				{{ case.description_title }}
+			</p>
+			
+		</div>
+
+	</div>
+
+	<div class="main-container">
+
+		<div class="container">
+
+			<div class="row">
+
+
+				<div class="col-md-12 fadeIn animated">
+
+					<div id="cause-carousel" class="carousel slide cause-carousel" data-ride="carousel">
+
+						  <!-- Indicators -->
+						  <ol class="carousel-indicators">
+						    <li data-target="#cause-carousel" data-slide-to="0" class="active"></li>
+						    <li data-target="#cause-carousel" data-slide-to="1"></li>
+						  </ol>
+
+						  <!-- Wrapper for slides -->
+						  <div class="carousel-inner" role="listbox">
+
+						    <div class="item active">
+
+						      <img src="{% static 'images/causes/slider/cause-slider-1.jpg' %}" alt="">
+						      
+						    </div>
+
+						    <div class="item">
+
+						      <img src="{% static 'images/causes/slider/cause-slider-2.jpg' %}" alt="">
+						      
+						    </div>
+
+						  </div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="row fadeIn animated">
+
+				<div class="col-md-6">
+
+					<h2 class="title-style-2">{{ case.description_title }}<span class="title-under"></span></h2>
+
+					<p>
+						{{ case.description_full}}
+					</p>
+
+				</div>
+
+
+			</div>
+
+			<div class="row ">
+
+				<div class="col-md-12 fadeIn animate-onscroll">
+
+					<h2 class="title-style-2"> Как помочь? <span class="title-under"></span></h2>
+
+					
+						<div role="tabpanel">
+
+							  <!-- Nav tabs -->
+							  <ul class="nav nav-tabs" role="tablist">
+							    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Адресс</a></li>
+							    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Контакты</a></li>
+							    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Реквизиты</a></li>
+							  </ul>
+
+							  <!-- Tab panes -->
+							  <div class="tab-content">
+							    <div role="tabpanel" class="tab-pane active" id="home">
+							    	{{ case.address}}</div>
+							    <div role="tabpanel" class="tab-pane" id="profile">
+							    	{{ case.contact}}</div>
+							    <div role="tabpanel" class="tab-pane" id="messages">
+							    	{{ case.requisites}}</div>
+							  </div>
+
+						</div>
+
+						<p></p>
+					
+
+				</div>
+
+
+
+
+			</div>
+
+		</div>
+
+
+
+
+
+
+	</div> <!-- /.main-container  -->
+
+
+  {% endblock %}

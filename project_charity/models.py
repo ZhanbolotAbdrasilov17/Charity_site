@@ -46,6 +46,25 @@ class Partner(models.Model):
         verbose_name = 'Партнёр'
 
 
+class HelpCase(models.Model):
+    title = models.CharField(max_length=200, verbose_name='Название случая')
+    description_title = models.TextField()
+    image_title = models.ImageField(upload_to='help_cases/', blank=True, null=True)
+    image_slider_1 = models.ImageField(upload_to='help_cases/', blank=True, null=True)
+    image_slider_2 = models.ImageField(upload_to='help_cases/', blank=True, null=True)
+    description_full = models.TextField()
+    address = models.CharField(max_length=200, verbose_name='Адрес', blank=True, null=True)
+    contact = models.CharField(max_length=200, verbose_name='Контактный номер', blank=True, null=True)
+    requisites = models.CharField(max_length=200, verbose_name='Реквизиты', blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name_plural = 'Случаи помощи'
+        verbose_name = 'Случай помощи'
+
 
 class About_us_mainpaig(models.Model):
     text = RichTextField()

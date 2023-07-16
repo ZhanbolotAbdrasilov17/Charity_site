@@ -9,3 +9,8 @@ admin.site.register(Gallery)
 @admin.register(About_us_mainpaig)
 class About_us_mainpaigAdminList(admin.ModelAdmin):
     pass
+
+@admin.register(HelpCase)
+class HelpCaseAdminList(admin.ModelAdmin):
+    pass
+
