@@ -66,6 +66,16 @@ class HelpCase(models.Model):
         verbose_name = 'Случай помощи'
 
 
+class About_page_text(models.Model):
+    text = RichTextField()
+
+    def __str__(self):
+        return 'Текст'
+    class Meta:
+        verbose_name_plural = 'Текст в самой странице о нас'
+        verbose_name = 'Текст в самой странице о нас'
+
+
 class About_us_mainpaig(models.Model):
     text = RichTextField()
 

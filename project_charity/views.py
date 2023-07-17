@@ -18,7 +18,9 @@ def home(request):
     return render(request, 'home.html', context )
 
 def about(request):
-    return render(request, 'about.html', )
+    about = About_page_text.objects.all()
+    context = {"about": about,}
+    return render(request, 'about.html', context)
 
 
 def causes(request):
@@ -62,7 +64,7 @@ class MailCreateView(View):
             send_mail(
                 'Почта клиента или партнера',
                 message,
-                'oriyental.treyd@mail.ru',
+                'itpythonzhanbolot@gmail.com',
                 ['orienttrade2016@gmail.com'],
                 fail_silently=False,
             )

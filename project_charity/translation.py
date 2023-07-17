@@ -1,6 +1,12 @@
 from modeltranslation.translator import register, TranslationOptions
 from .models import *
 
+
+@register(About_page_text)
+class About_page_textTranslation(TranslationOptions):
+    fields = ('text',)
+
+
 @register(About_us_mainpaig)
 class About_us_mainpaigTranslation(TranslationOptions):
     fields = ('text',)
