@@ -7,4 +7,3 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'site_charity.settings')
 
 application = get_wsgi_application()
 
-app = application
