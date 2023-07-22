@@ -34,21 +34,54 @@
 						  </ol>
 
 						  <!-- Wrapper for slides -->
-						  <div class="carousel-inner" role="listbox">
+						  <!-- HTML-разметка для карусели -->
+<!-- HTML-разметка для карусели -->
+<div class="carousel-inner" role="listbox">
+  <div class="item active">
+    <img src="{{case.image_slider_1.url}}" alt="">
+  </div>
+  <div class="item">
+    <img src="{{case.image_slider_2.url}}" alt="">
+  </div>
+</div>
 
-						    <div class="item active">
+<!-- Кнопки для управления каруселью -->
+<button class="carousel-prev">Предыдущий</button>
+<button class="carousel-next">Следующий</button>
 
-						      <img src="{% static 'images/causes/slider/cause-slider-1.jpg' %}" alt="">
-						      
-						    </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function() {
+  // Обработчик щелчка на кнопку "Предыдущий"
+  $(".carousel-prev").click(function() {
+    var currentSlide = $(".carousel-inner .item.active");
+    var prevSlide = currentSlide.prev();
 
-						    <div class="item">
+    if (prevSlide.length === 0) {
+      // Если предыдущего слайда нет, переключаемся к последнему слайду
+      prevSlide = $(".carousel-inner .item:last");
+    }
 
-						      <img src="{% static 'images/causes/slider/cause-slider-2.jpg' %}" alt="">
-						      
-						    </div>
+    currentSlide.removeClass("active");
+    prevSlide.addClass("active");
+  });
 
-						  </div>
+  // Обработчик щелчка на кнопку "Следующий"
+  $(".carousel-next").click(function() {
+    var currentSlide = $(".carousel-inner .item.active");
+    var nextSlide = currentSlide.next();
+
+    if (nextSlide.length === 0) {
+      // Если следующего слайда нет, переключаемся к первому слайду
+      nextSlide = $(".carousel-inner .item:first");
+    }
+
+    currentSlide.removeClass("active");
+    nextSlide.addClass("active");
+  });
+});
+</script>
+
 					</div>
 
 				</div>

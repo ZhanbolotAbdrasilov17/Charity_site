@@ -96,9 +96,9 @@
 
             <ul class="nav navbar-nav">
 
-              <li><a class="is-active" href="{% url 'home' %}">HOME</a></li>
-              <li><a href="{% url 'about' %}">ABOUT</a></li>
-              <li class="has-child"><a href="{% url 'causes' %}">CAUSES</a>
+              <li><a class="is-active" href="{% url 'home' %}">{% trans "Главная" %}</a></li>
+              <li><a href="{% url 'about' %}">{% trans "О нас" %}</a></li>
+              <li class="has-child"><a href="{% url 'causes' %}">{% trans "Помощь" %}</a>
 
                 <!-- <ul class="submenu"> -->
                 <!-- <li class="submenu-item"><a href="causes.html">Causes list </a></li> -->
@@ -108,8 +108,8 @@
                 <!-- </ul> -->
 
               </li>
-              <li><a href="{% url 'gallery' %}">GALLERY</a></li>
-              <li><a href="{% url 'contact' %}">CONTACT</a></li>
+              <li><a href="{% url 'gallery' %}">{% trans "Галерея" %}</a></li>
+              <li><a href="{% url 'contact' %}">{% trans "Контакты" %}</a></li>
 
             </ul>
 

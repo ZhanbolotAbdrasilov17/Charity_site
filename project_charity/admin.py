@@ -4,7 +4,19 @@ from .models import *
 
 # Register your models here.
 admin.site.register(Props)
-admin.site.register(Gallery)
+admin.site.register(Gallery_1)
+admin.site.register(Gallery_2)
+admin.site.register(Gallery_3)
+admin.site.register(Gallery_4)
+admin.site.register(Gallery_5)
+admin.site.register(Gallery_6)
+admin.site.register(Gallery_7)
+admin.site.register(Gallery_8)
+admin.site.register(Gallery_9)
+admin.site.register(Gallery_10)
+admin.site.register(Gallery_11)
+admin.site.register(Gallery_12)
+
 
 
 @admin.register(About_page_text)

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-18 00:49+0000\n"
+"POT-Creation-Date: 2023-07-22 15:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
 #: site_charity/settings.py:116
 msgid "Russian"
 msgstr ""
@@ -28,3 +29,51 @@ msgstr ""
 #: site_charity/settings.py:118
 msgid "English"
 msgstr ""
+
+#: templates/about.html:11 templates/index.html:100
+msgid "О нас"
+msgstr "Биз жөнүндө"
+
+#: templates/about.html:58
+msgid "Выполняем миссии"
+msgstr "Миссияларды аткаруу"
+
+#: templates/about.html:73
+msgid "Делай добро"
+msgstr "Жакшылык кыл"
+
+#: templates/about.html:88
+msgid "Помощь и поддержка"
+msgstr "Жардам жана колдоо"
+
+#: templates/about.html:103
+msgid "Спасаем жизни"
+msgstr "Өмүрдү сактап калуу"
+
+#: templates/causes.html:10
+msgid "Они нуждаются"
+msgstr "Алар муктаж"
+
+#: templates/causes.html:22
+msgid "Ты можешь помочь им!"
+msgstr "Сен аларга жардам бере аласын!"
+
+#: templates/causes.html:45
+msgid "Подробнее"
+msgstr "Кененирээк"
+
+#: templates/gallery.html:11 templates/index.html:111
+msgid "Галерея"
+msgstr "Сүрөт галереясы"
+
+#: templates/index.html:99
+msgid "Главная"
+msgstr "Башкы"
+
+#: templates/index.html:101
+msgid "Помощь"
+msgstr "Жардам"
+
+#: templates/index.html:112
+msgid "Контакты"
+msgstr "Байланыш"

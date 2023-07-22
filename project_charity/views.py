@@ -14,6 +14,7 @@ from django.views import View
 
 def home(request):
     about = About_us_mainpaig.objects.all()
+
     context = {"about": about,}
     return render(request, 'home.html', context )
 
@@ -43,7 +44,26 @@ def causes_single(request):
     return render(request, 'causes_single.html', )
 
 def gallery(request):
-    return render(request, 'gallery.html', )
+    images1 = Gallery_1.objects.all()
+    images2 = Gallery_2.objects.all()
+    images3 = Gallery_3.objects.all()
+    images4 = Gallery_4.objects.all()
+    images5 = Gallery_5.objects.all()
+    images6 = Gallery_6.objects.all()
+    images7 = Gallery_7.objects.all()
+    images8 = Gallery_8.objects.all()
+    images9 = Gallery_9.objects.all()
+    images10 = Gallery_10.objects.all()
+    images11 = Gallery_11.objects.all()
+    images12 = Gallery_12.objects.all()
+
+    context = {
+        'images1': images1, 'images2': images2, 'images3': images3, 'images4': images4,
+        'images5': images5, 'images6': images6, 'images7': images7, 'images8': images8,
+        'images9': images9, 'images10': images10, 'images11': images11, 'images12': images12,
+    }
+    return render(request, 'gallery.html', context)
+
 
 
 def contact(request):
