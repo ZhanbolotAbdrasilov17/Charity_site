@@ -144,5 +144,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 EMAIL_HOST = 'smtp.mail.ru'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'charity_kyrgystan@mail.ru'
-EMAIL_HOST_PASSWORD = 'realreal20162016'
+EMAIL_HOST_PASSWORD = 'bak0kk20f9KXLbhnM3CW'
 EMAIL_USE_TLS = True

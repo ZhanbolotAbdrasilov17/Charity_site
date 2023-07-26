@@ -17,6 +17,34 @@ class SocialMedia(models.Model):
         verbose_name_plural = 'Социальные сети'
         verbose_name = 'Социальная сеть'
 
+class Slider(models.Model):
+    name = models.CharField(max_length=100)
+    text = models.TextField()
+    low_text = models.TextField()
+    website = models.URLField()
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = 'Слайдер'
+        verbose_name = 'Слайдер'
+
+
+class Desc(models.Model):
+    name = models.CharField(max_length=100)
+    text = models.TextField()
+    low_text = models.TextField()
+    inner_text = models.TextField()
+    website = models.URLField()
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = 'Описание в главной странице'
+        verbose_name = 'Описание в главной странице'
+
 
 class Props(models.Model):
     mbank = RichTextField()

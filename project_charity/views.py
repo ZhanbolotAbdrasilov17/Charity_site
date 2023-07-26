@@ -13,10 +13,21 @@ from django.views import View
 
 
 def home(request):
-    about = About_us_mainpaig.objects.all()
+    slider_1 = Slider.objects.get(pk=1)
+    slider_2 = Slider.objects.get(pk=2)
+    slider_3 = Slider.objects.get(pk=3)
 
-    context = {"about": about,}
-    return render(request, 'home.html', context )
+    desc_1 = Desc.objects.get(pk=1)
+    desc_2 = Desc.objects.get(pk=2)
+
+
+    about = About_us_mainpaig.objects.all()
+    partners = Partner.objects.all()
+
+    context = {"about": about, "partners": partners, "slider_1":slider_1,
+               "slider_2": slider_2, "slider_3": slider_3,
+               "desc_1": desc_1, "desc_2": desc_2,}
+    return render(request, 'home.html', context)
 
 def about(request):
     about = About_page_text.objects.all()
@@ -84,8 +95,8 @@ class MailCreateView(View):
             send_mail(
                 'Почта клиента или партнера',
                 message,
-                'itpythonzhanbolot@gmail.com',
-                ['orienttrade2016@gmail.com'],
+                'charity_kyrgystan@mail.ru',
+                ['itpythonzhanbolot@gmail.com'],
                 fail_silently=False,
             )
 

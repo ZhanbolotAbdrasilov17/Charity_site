@@ -1314,11 +1314,26 @@ body {
 }
 
 .col-md-6 {
-  width: 50%;
+  width: 100%;
+}
+
+@media screen and (max-width: 990px) {
+  .col-md-6 {
+    width: 100%;
+  }
+
+  .fadeIn > .col-md-6 > img {
+    height: auto;
+  }
+
 }
 
 .home-reasons .col-md-6 {
   width: 100%;
+}
+
+.col-md-6 > h2 {
+  margin-top: 13px;
 }
 
 .col-md-6 img {}
@@ -1356,7 +1371,7 @@ body {
 .modal-home-reasons>.box {
   width: 70%;
   height: 500px;
-  background-color: #03C03C;
+  background-color: #2d6a4f;
   position: relative;
   border-radius: 10px;
   padding: 30px;
@@ -1365,8 +1380,9 @@ body {
 .modal-home-reasons img {
   width: 50px;
   position: absolute;
-  top: 0px;
+  top: -70px;
   right: 20px;
+  opacity: 0.5;
 }
 
 .modal-home-reasons p {
@@ -1412,7 +1428,7 @@ body {
   font-size: 24px;
   color: white;
 
-  background-color: #03C03C;
+  background-color: #2d6a4f;
 
 }
 
@@ -1444,3 +1460,110 @@ body {
   width: 50px;
   height: 50px;
 }
+
+
+.carousel-caption > a {
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
+
+.carousel-caption > a:hover {
+  background-color: white;
+  color: black;
+}
+
+@media screen and (max-width: 990px) {
+  .main-footer .col-md-4:nth-child(3) {
+    padding: 0;
+  }
+
+
+}
+
+  .col-md-6 > h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fadeIn > .col-md-6:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  }
+
+
+.form-language {
+    color: black;
+}
+
+.form-language > select{
+    outline: none;
+    padding: 2px;
+    border-radius: 7px;
+
+}
+
+.form-language > .go {
+    width: 40px;
+    height: 25px;
+    border-radius: 7px;
+    border: none;
+}
+
+.form-language > select option {
+    border-radius: 7px;
+}
+
+
+.navbar-main > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carousel-btn-scrapper {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 10px;
+}
+
+.row .cases {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.carousel-inner>.item>img {
+    border: 2px solid black;
+}
+
+#col-md-6-causes {
+    display: flex;
+    justify-content: start;
+}
+
+.carousel-btn-scrapper > * {
+    padding: 10px;
+    border: none;
+    border-radius: 7px;
+    background: black;
+    color: white;
+}
+
+.logo {
+    background-image: url(../fonts/Круглый_логотип,_именной_бесплатный_лого_4.png);
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+/*
+.navbar-main > .container > img {
+    width: 50px;
+    height: 50px;
+}*/

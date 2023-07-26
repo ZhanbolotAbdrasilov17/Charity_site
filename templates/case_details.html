@@ -23,7 +23,7 @@
 			<div class="row">
 
 
-				<div class="col-md-12 fadeIn animated">
+				<div class="col-md-12 fadeIn animated cases">
 
 					<div id="cause-carousel" class="carousel slide cause-carousel" data-ride="carousel">
 
@@ -46,8 +46,12 @@
 </div>
 
 <!-- Кнопки для управления каруселью -->
-<button class="carousel-prev">Предыдущий</button>
-<button class="carousel-next">Следующий</button>
+
+<div class="carousel-btn-scrapper">
+	<button class="carousel-prev">Предыдущий</button>
+	<button class="carousel-next">Следующий</button>
+</div>
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
@@ -90,7 +94,7 @@ $(document).ready(function() {
 
 			<div class="row fadeIn animated">
 
-				<div class="col-md-6">
+				<div class="col-md-6" id="col-md-6-causes">
 
 					<h2 class="title-style-2">{{ case.description_title }}<span class="title-under"></span></h2>
 

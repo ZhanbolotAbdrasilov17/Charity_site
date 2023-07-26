@@ -4,6 +4,8 @@ from .models import *
 
 # Register your models here.
 admin.site.register(Props)
+admin.site.register(Partner)
+
 admin.site.register(Gallery_1)
 admin.site.register(Gallery_2)
 admin.site.register(Gallery_3)
@@ -17,6 +19,16 @@ admin.site.register(Gallery_10)
 admin.site.register(Gallery_11)
 admin.site.register(Gallery_12)
 
+
+
+@admin.register(Slider)
+class SliderAdminList(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Desc)
+class DescAdminList(admin.ModelAdmin):
+    pass
 
 
 @admin.register(About_page_text)

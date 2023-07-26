@@ -2,6 +2,15 @@ from modeltranslation.translator import register, TranslationOptions
 from .models import *
 
 
+
+@register(Slider)
+class Slider1Translation(TranslationOptions):
+    fields = ('text', 'low_text')
+
+@register(Desc)
+class DescTranslation(TranslationOptions):
+    fields = ('text', 'low_text', 'inner_text')
+
 @register(About_page_text)
 class About_page_textTranslation(TranslationOptions):
     fields = ('text',)
